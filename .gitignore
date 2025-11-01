@@ -1,0 +1,54 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars.backup
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# Lambda package
+lambda/**/lambda_function.zip
+lambda/**/*.pyc
+lambda/**/__pycache__/
+lambda/**/venv/
+lambda/**/.venv/
+lambda/**/dist/
+lambda/**/build/
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# CI/CD
+.github/workflows/secrets.yml
+
+# Terraform module cache
+.terragrunt-cache/
+
+# Backup files
+*.bak
+*.backup
+
+# Environment-specific (if you create them)
+*.local
+
+# Secrets (extra safety)
+**/secrets.tf
+**/secret.auto.tfvars
+credentials.json
