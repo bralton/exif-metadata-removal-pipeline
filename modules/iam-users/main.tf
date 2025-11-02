@@ -120,7 +120,7 @@ resource "aws_secretsmanager_secret" "user_a_credentials" {
 }
 
 resource "aws_secretsmanager_secret_version" "user_a_credentials" {
-  secret_id = aws_secretsmanager_secret.user_a_credentials[0].id
+  secret_id = aws_secretsmanager_secret.user_a_credentials.id
   secret_string = jsonencode({
     access_key_id     = aws_iam_access_key.user_a.id
     secret_access_key = aws_iam_access_key.user_a.secret
@@ -142,7 +142,7 @@ resource "aws_secretsmanager_secret" "user_b_credentials" {
 }
 
 resource "aws_secretsmanager_secret_version" "user_b_credentials" {
-  secret_id = aws_secretsmanager_secret.user_b_credentials[0].id
+  secret_id = aws_secretsmanager_secret.user_b_credentials.id
   secret_string = jsonencode({
     access_key_id     = aws_iam_access_key.user_b.id
     secret_access_key = aws_iam_access_key.user_b.secret

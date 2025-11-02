@@ -10,10 +10,10 @@ output "user_b_name" {
 
 output "user_a_secrets_manager_arn" {
   description = "ARN of Secrets Manager secret for User A credentials"
-  value       = aws_secretsmanager_secret.user_a_credentials[0].arn
+  value       = aws_secretsmanager_secret.user_a_credentials.arn
 }
 
 output "user_b_secrets_manager_arn" {
   description = "ARN of Secrets Manager secret for User B credentials"
-  value       = aws_secretsmanager_secret.user_b_credentials[0].arn
+  value       = aws_secretsmanager_secret.user_b_credentials.arn
 }
