@@ -65,6 +65,8 @@ terraform-standard-layout/
 └── README.md
 ```
 
+Due to the `common.tfvars` file in the root of each environment, it is **important** to pass the `--var-file='../common.tfvars` flag to any `terraform plan` or `terraform apply` commands from inside of the component folders.
+
 ## Why Component-Based Structure?
 
 ### Benefits
